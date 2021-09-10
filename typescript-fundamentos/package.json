@@ -1,0 +1,46 @@
+{
+  "name": "curso-typescript-zero-to-hero",
+  "version": "1.0.0",
+  "description": "Curso TypeScript - Zero to Hero!",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "test": "jest",
+    "prepublish": "npm run test && npm run build"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glaucia86/curso-typescript-zero-to-hero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glaucia86/curso-typescript-zero-to-hero/issues"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "lib"
+    ]
+  },
+  "homepage": "https://github.com/glaucia86/curso-typescript-zero-to-hero#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "@types/jest": "^26.0.23",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.4",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4",
+    "ts-jest": "^27.0.3"
+  }
+}
