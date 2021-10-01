@@ -9,6 +9,7 @@ Static - sao classes que nao necessitam que sejam inicializadas, geralemnte sao 
 Abstract - sao metodos que possuem apenas uam assinatura sem ter uma implementaçao, Uma classe abastrata por definiçaõ é uma classe imcompleta, ou seja é uma classe que não posseum inicialização 'new' e que pode possuir medotos abstratos.
 
 Obs:
+- Uma instancia a grosso modo é construçao do objeto a partir da classe: ex (casse conta bancaria, cada conta bancaria criada sera uma instancia dessa classe ou seja um novo objeto)
 
 - Quando um metodo de uma classa pai possui 1 ou mais paratros, a classe que extende desta obrigatoriamente deve tb possuir NO MINIMO a mesma quantidade de parametros, podendo ser para + nunca para -
 
