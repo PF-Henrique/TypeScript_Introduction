@@ -11,6 +11,12 @@ TypeScript - como o próprio nome sugere - é a versão tipada do JavaScript. Is
 
 ---
 
+### Inicializando um projeto
+
+```
+$ npm init -y
+```
+
 ### Instalando o TypeScript
 
 ```
@@ -25,6 +31,58 @@ $ yarn global add typescript
 ```
 $ tsc -v
 ```
+
+### Gerando o tsconfig.json
+
+```
+tsc --init
+```
+ex:
+```
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "lib": ["es2015"]
+}
+```
+
+**module:** define o método de geração de código do módulo. O Node usa o commonjs. <br>
+**target:** especifica o nível de linguagem de saída. <br>
+**moduleResolution:** isso ajuda o compilador a descobrir a que uma importação se refere. O valor node imita o mecanismo de resolução de módulo do Node. <br>
+**outDir:** essa é a localização onde serão gerados os arquivos .js após a transcompilação. Neste tutorial, você irá salvá-lo como dist.<br>
+
+
+### Gerando o tslint.json
+
+```
+$ ./node_modules/.bin/tslint --init
+```
+Abra o arquivo tslint.json recém-gerado e adicione a regra no-console adequadamente:
+
+tslint.json
+
+```
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {
+    "no-console": false
+  },
+  "rulesDirectory": []
+}
+ 
+```
+
+Por padrão, o linter do TypeScript impede a depuração usando declarações de console. Dessa forma, é necessário dizer explicitamente ao linter para revogar a regra no-console padrão.
+
+
 ---
 
 ### Compilando TypeScript de forma manual
